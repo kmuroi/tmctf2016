@@ -1,10 +1,12 @@
-Category: Analysis - offensive
-Points: 200
+# Question
+* Category: Analysis - offensive
+* Points: 200
+
 This challenge is composed of a simple remote overflow of a global array. The server address is 52.197.128.90 and the vulnerable application listens on TCP port 80-85. Each port has the same behavior so you can select one of them.
 
 The following code contains a bug that can be exploited to read back a flag:
 
-
+```
 int pwned;
 char buffer[1024];
 
@@ -33,6 +35,6 @@ DWORD WINAPI CallBack(LPVOID lpParameter) {
 
   return 0;
 }
-
+```
 
 Craft a packet that would return a valid flag. Good luck!
